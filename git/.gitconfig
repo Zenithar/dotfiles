@@ -1,0 +1,49 @@
+[user]
+	name = Dominykas Djacenko
+	email = chaosteil@gmail.com
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+
+[color]
+	ui = true
+
+[status]
+	relativePaths = true
+
+[grep]
+	LineNumber = true
+
+[alias]
+	amend = git commit --amend
+	branches = branch -a
+	stashes = stash list
+	remotes = remote -v
+	tags = tag
+	unstage = reset -q HEAD --
+	discard = checkout --
+	nuke = !git reset --hard HEAD && git clean -fd
+	uncommit = reset --soft HEAD^1
+	l = log --no-merges
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status -sb
+	purr = pull --rebase
+	b = branch
+	co = checkout
+	deleteremote = push origin --delete
+
+[push]
+	default = simple
+[submodule]
+	fetchJobs = 4
+[diff]
+	compactionHeuristic = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
